@@ -1,19 +1,19 @@
-package com.easypan.controller;
+package com.freepan.controller;
 
-import com.easypan.annotation.GlobalInterceptor;
-import com.easypan.annotation.VerifyParam;
-import com.easypan.component.RedisComponent;
-import com.easypan.entity.config.AppConfig;
-import com.easypan.entity.constants.Constants;
-import com.easypan.entity.dto.CreateImageCode;
-import com.easypan.entity.dto.SessionWebUserDto;
-import com.easypan.entity.enums.VerifyRegexEnum;
-import com.easypan.entity.po.UserInfo;
-import com.easypan.entity.vo.ResponseVO;
-import com.easypan.exception.BusinessException;
-import com.easypan.service.EmailCodeService;
-import com.easypan.service.UserInfoService;
-import com.easypan.utils.StringTools;
+import com.freepan.annotation.GlobalInterceptor;
+import com.freepan.annotation.VerifyParam;
+import com.freepan.component.RedisComponent;
+import com.freepan.entity.config.AppConfig;
+import com.freepan.entity.constants.Constants;
+import com.freepan.entity.dto.CreateImageCode;
+import com.freepan.entity.dto.SessionWebUserDto;
+import com.freepan.entity.enums.VerifyRegexEnum;
+import com.freepan.entity.po.UserInfo;
+import com.freepan.entity.vo.ResponseVO;
+import com.freepan.exception.BusinessException;
+import com.freepan.service.EmailCodeService;
+import com.freepan.service.UserInfoService;
+import com.freepan.utils.StringTools;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
@@ -84,7 +84,7 @@ public class AccountController extends ABaseController {
      * @auther: laoluo
      * @date: 20:39 2023/4/1
      * @param: [session, email, checkCode, type]
-     * @return: com.easypan.entity.vo.ResponseVO
+     * @return: com.freepan.entity.vo.ResponseVO
      */
     @RequestMapping("/sendEmailCode")
     @GlobalInterceptor(checkLogin = false, checkParams = true)
@@ -108,7 +108,7 @@ public class AccountController extends ABaseController {
      * @auther: laoluo
      * @date: 20:39 2023/4/1
      * @param: [session, email, nickName, password, checkCode, emailCode]
-     * @return: com.easypan.entity.vo.ResponseVO
+     * @return: com.freepan.entity.vo.ResponseVO
      */
     @RequestMapping("/register")
     @GlobalInterceptor(checkLogin = false, checkParams = true)
@@ -134,7 +134,7 @@ public class AccountController extends ABaseController {
      * @auther: laoluo
      * @date: 20:39 2023/4/1
      * @param: [session, request, email, password, checkCode]
-     * @return: com.easypan.entity.vo.ResponseVO
+     * @return: com.freepan.entity.vo.ResponseVO
      */
     @RequestMapping("/login")
     @GlobalInterceptor(checkLogin = false, checkParams = true)
